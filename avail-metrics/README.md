@@ -1,4 +1,5 @@
 # Avail Metrics and Grafana Dashboard
+![grafana-01](https://github.com/Cumulo-pro/Avail-tools/assets/2853158/f5130960-cb79-4ea0-ace7-874bef6ae7c2)
 
 This repository contains detailed information about Avail metrics and the associated Grafana dashboard.
 
