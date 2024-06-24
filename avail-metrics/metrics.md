@@ -32,7 +32,7 @@ ________________________________________________________________________________
 __substrate_block_height__  
 - best: This is the most recent block that the node considers to be the best known block.
 - finalised: This is the last block that has been finalised and confirmed as a permanent part of the chain.
-- sync_target (sync target): This is the block height target that the node is trying to reach during synchronisation.
+- sync_target (sync target): This is the block height target that the node is trying to reach during synchronisation.  
 ![image](https://github.com/Cumulo-pro/Avail-tools/assets/2853158/65b3e3b6-7f55-4d5a-8001-38485faeb1ae)
 
 ## Average Block Proposal Time
