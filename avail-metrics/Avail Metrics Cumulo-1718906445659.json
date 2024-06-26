@@ -21,7 +21,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "9.3.2"
+      "version": "10.4.2"
     },
     {
       "type": "panel",
@@ -109,7 +109,7 @@
         "content": "<div style=\"text-align: center;\">\n    <img src=\"https://cumulo.pro/images/pic09.png\" alt=\"Logo\" style=\"height: 150px;\"> <!-- Ajusta la altura según sea necesario -->\n    <h2>Avail Node metrics</h2>\n    <h5>by <a href=\"https://cumulo.pro\">Cumulo</a></h5>\n</div>\n",
         "mode": "markdown"
       },
-      "pluginVersion": "9.3.2",
+      "pluginVersion": "10.4.2",
       "title": "Panel Title",
       "type": "text"
     },
@@ -164,7 +164,6 @@
         "y": 0
       },
       "id": 6,
-      "links": [],
       "options": {
         "colorMode": "background",
         "graphMode": "none",
@@ -177,10 +176,12 @@
           "fields": "",
           "values": false
         },
+        "showPercentChange": false,
         "text": {},
-        "textMode": "value_and_name"
+        "textMode": "value_and_name",
+        "wideLayout": true
       },
-      "pluginVersion": "9.3.2",
+      "pluginVersion": "10.4.2",
       "targets": [
         {
           "datasource": {
@@ -189,7 +190,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "substrate_block_height",
+          "expr": "substrate_block_height{chain=\"$chain\"}",
           "format": "time_series",
           "instant": false,
           "interval": "",
@@ -202,6 +203,7 @@
       "type": "stat"
     },
     {
+      "collapsed": false,
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -209,6 +211,7 @@
         "y": 8
       },
       "id": 114,
+      "panels": [],
       "title": "Node metrics",
       "type": "row"
     },
@@ -249,6 +252,8 @@
       },
       "id": 98,
       "options": {
+        "minVizHeight": 75,
+        "minVizWidth": 75,
         "orientation": "auto",
         "reduceOptions": {
           "calcs": [
@@ -258,9 +263,10 @@
           "values": false
         },
         "showThresholdLabels": false,
-        "showThresholdMarkers": true
+        "showThresholdMarkers": true,
+        "sizing": "auto"
       },
-      "pluginVersion": "9.3.2",
+      "pluginVersion": "10.4.2",
       "targets": [
         {
           "datasource": {
@@ -268,7 +274,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "substrate_proposer_block_proposal_time_sum/substrate_proposer_block_proposal_time_count",
+          "expr": "substrate_proposer_block_proposal_time_sum{chain=\"$chain\"}/substrate_proposer_block_proposal_time_count{chain=\"$chain\"}",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -314,6 +320,8 @@
       },
       "id": 96,
       "options": {
+        "minVizHeight": 75,
+        "minVizWidth": 75,
         "orientation": "auto",
         "reduceOptions": {
           "calcs": [
@@ -323,9 +331,10 @@
           "values": false
         },
         "showThresholdLabels": false,
-        "showThresholdMarkers": true
+        "showThresholdMarkers": true,
+        "sizing": "auto"
       },
-      "pluginVersion": "9.3.2",
+      "pluginVersion": "10.4.2",
       "targets": [
         {
           "datasource": {
@@ -333,7 +342,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "substrate_proposer_block_constructed_sum/substrate_proposer_block_constructed_count",
+          "expr": "substrate_proposer_block_constructed_sum{chain=\"$chain\"}/substrate_proposer_block_constructed_count{chain=\"$chain\"}",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -378,6 +387,8 @@
       },
       "id": 108,
       "options": {
+        "minVizHeight": 75,
+        "minVizWidth": 75,
         "orientation": "auto",
         "reduceOptions": {
           "calcs": [
@@ -387,9 +398,10 @@
           "values": false
         },
         "showThresholdLabels": false,
-        "showThresholdMarkers": true
+        "showThresholdMarkers": true,
+        "sizing": "auto"
       },
-      "pluginVersion": "9.3.2",
+      "pluginVersion": "10.4.2",
       "targets": [
         {
           "datasource": {
@@ -397,7 +409,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "substrate_sub_libp2p_peers_count",
+          "expr": "substrate_sub_libp2p_peers_count{chain=\"$chain\"}",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -442,6 +454,8 @@
       },
       "id": 116,
       "options": {
+        "minVizHeight": 75,
+        "minVizWidth": 75,
         "orientation": "auto",
         "reduceOptions": {
           "calcs": [
@@ -451,9 +465,10 @@
           "values": false
         },
         "showThresholdLabels": false,
-        "showThresholdMarkers": true
+        "showThresholdMarkers": true,
+        "sizing": "auto"
       },
-      "pluginVersion": "9.3.2",
+      "pluginVersion": "10.4.2",
       "targets": [
         {
           "datasource": {
@@ -461,7 +476,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "substrate_sub_libp2p_peerset_num_discovered",
+          "expr": "substrate_sub_libp2p_peerset_num_discovered{chain=\"$chain\"}",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -531,17 +546,19 @@
           "fields": "",
           "values": false
         },
-        "textMode": "auto"
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
       },
-      "pluginVersion": "9.3.2",
+      "pluginVersion": "10.4.2",
       "targets": [
         {
           "datasource": {
             "type": "prometheus",
             "uid": "${DS_PROMETHEUS}"
           },
-          "editorMode": "builder",
-          "expr": "substrate_sub_libp2p_is_major_syncing",
+          "editorMode": "code",
+          "expr": "substrate_sub_libp2p_is_major_syncing{chain=\"$chain\"}",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -597,9 +614,11 @@
           "fields": "",
           "values": false
         },
-        "textMode": "auto"
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
       },
-      "pluginVersion": "9.3.2",
+      "pluginVersion": "10.4.2",
       "targets": [
         {
           "datasource": {
@@ -607,7 +626,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "substrate_proposer_number_of_transactions",
+          "expr": "substrate_proposer_number_of_transactions{chain=\"$chain\"}",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -663,9 +682,11 @@
           "fields": "",
           "values": false
         },
-        "textMode": "auto"
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
       },
-      "pluginVersion": "9.3.2",
+      "pluginVersion": "10.4.2",
       "targets": [
         {
           "datasource": {
@@ -673,7 +694,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "substrate_ready_transactions_number",
+          "expr": "substrate_ready_transactions_number{chain=\"$chain\"}",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -718,6 +739,8 @@
       },
       "id": 68,
       "options": {
+        "minVizHeight": 75,
+        "minVizWidth": 75,
         "orientation": "auto",
         "reduceOptions": {
           "calcs": [
@@ -727,9 +750,10 @@
           "values": false
         },
         "showThresholdLabels": false,
-        "showThresholdMarkers": true
+        "showThresholdMarkers": true,
+        "sizing": "auto"
       },
-      "pluginVersion": "9.3.2",
+      "pluginVersion": "10.4.2",
       "targets": [
         {
           "datasource": {
@@ -737,7 +761,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "substrate_sync_queued_blocks",
+          "expr": "substrate_sync_queued_blocks{chain=\"$chain\"}",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -758,6 +782,7 @@
             "mode": "thresholds"
           },
           "custom": {
+            "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
             "axisLabel": "",
@@ -771,6 +796,7 @@
               "tooltip": false,
               "viz": false
             },
+            "insertNulls": false,
             "lineInterpolation": "linear",
             "lineWidth": 1,
             "pointSize": 5,
@@ -834,7 +860,7 @@
           },
           "editorMode": "code",
           "exemplar": true,
-          "expr": "substrate_sync_queued_blocks",
+          "expr": "substrate_sync_queued_blocks{chain=\"$chain\"}",
           "interval": "",
           "legendFormat": "",
           "range": true,
@@ -892,9 +918,11 @@
           "fields": "",
           "values": false
         },
-        "textMode": "auto"
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
       },
-      "pluginVersion": "9.3.2",
+      "pluginVersion": "10.4.2",
       "targets": [
         {
           "datasource": {
@@ -903,7 +931,7 @@
           },
           "editorMode": "code",
           "exemplar": true,
-          "expr": "substrate_number_leaves",
+          "expr": "substrate_number_leaves{chain=\"$chain\"}",
           "interval": "",
           "legendFormat": "",
           "range": true,
@@ -983,9 +1011,11 @@
           "fields": "",
           "values": false
         },
-        "textMode": "auto"
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
       },
-      "pluginVersion": "9.3.2",
+      "pluginVersion": "10.4.2",
       "targets": [
         {
           "datasource": {
@@ -993,7 +1023,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "substrate_build_info",
+          "expr": "substrate_build_info{chain=\"$chain\"}",
           "legendFormat": "Node: {{name}}  Version:   {{version}}  Chain:  {{chain}} ",
           "range": true,
           "refId": "A"
@@ -1049,9 +1079,11 @@
           "fields": "",
           "values": false
         },
-        "textMode": "auto"
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
       },
-      "pluginVersion": "9.3.2",
+      "pluginVersion": "10.4.2",
       "targets": [
         {
           "datasource": {
@@ -1059,7 +1091,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "substrate_state_cache_bytes",
+          "expr": "substrate_state_cache_bytes{chain=\"$chain\"}",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -1116,9 +1148,11 @@
           "fields": "",
           "values": false
         },
-        "textMode": "auto"
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
       },
-      "pluginVersion": "9.3.2",
+      "pluginVersion": "10.4.2",
       "targets": [
         {
           "datasource": {
@@ -1126,7 +1160,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "substrate_sub_libp2p_network_bytes_total",
+          "expr": "substrate_sub_libp2p_network_bytes_total{chain=\"$chain\"}",
           "legendFormat": "{{direction}}",
           "range": true,
           "refId": "A"
@@ -1147,6 +1181,7 @@
             "mode": "thresholds"
           },
           "custom": {
+            "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
             "axisLabel": "",
@@ -1160,6 +1195,7 @@
               "tooltip": false,
               "viz": false
             },
+            "insertNulls": false,
             "lineInterpolation": "linear",
             "lineWidth": 1,
             "pointSize": 5,
@@ -1219,7 +1255,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "substrate_sub_libp2p_peerset_num_discovered",
+          "expr": "substrate_sub_libp2p_peerset_num_discovered{chain=\"$chain\"}",
           "legendFormat": "peers",
           "range": true,
           "refId": "A"
@@ -1240,6 +1276,7 @@
             "mode": "thresholds"
           },
           "custom": {
+            "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
             "axisLabel": "",
@@ -1253,6 +1290,7 @@
               "tooltip": false,
               "viz": false
             },
+            "insertNulls": false,
             "lineInterpolation": "linear",
             "lineWidth": 1,
             "pointSize": 5,
@@ -1312,8 +1350,8 @@
             "type": "prometheus",
             "uid": "${DS_PROMETHEUS}"
           },
-          "editorMode": "builder",
-          "expr": "avail_header_extension_builder_evaluation_grid_build_time_sum/avail_header_extension_builder_evaluation_grid_build_time_count",
+          "editorMode": "code",
+          "expr": "avail_header_extension_builder_evaluation_grid_build_time_sum{chain=\"$chain\"}/avail_header_extension_builder_evaluation_grid_build_time_count{chain=\"$chain\"}",
           "legendFormat": "Avail Node Microseconds (µs)",
           "range": true,
           "refId": "A"
@@ -1334,6 +1372,7 @@
             "mode": "thresholds"
           },
           "custom": {
+            "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
             "axisLabel": "",
@@ -1347,6 +1386,7 @@
               "tooltip": false,
               "viz": false
             },
+            "insertNulls": false,
             "lineInterpolation": "linear",
             "lineWidth": 1,
             "pointSize": 5,
@@ -1407,7 +1447,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "avail_header_extension_builder_total_execution_time_sum/avail_header_extension_builder_total_execution_time_count",
+          "expr": "avail_header_extension_builder_total_execution_time_sum{chain=\"$chain\"}/avail_header_extension_builder_total_execution_time_count{chain=\"$chain\"}",
           "legendFormat": "Avail Node Microseconds (µs)",
           "range": true,
           "refId": "A"
@@ -1428,6 +1468,7 @@
             "mode": "thresholds"
           },
           "custom": {
+            "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
             "axisLabel": "",
@@ -1441,6 +1482,7 @@
               "tooltip": false,
               "viz": false
             },
+            "insertNulls": false,
             "lineInterpolation": "linear",
             "lineWidth": 1,
             "pointSize": 5,
@@ -1502,7 +1544,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "avail_header_extension_builder_commitment_build_time_sum/avail_header_extension_builder_commitment_build_time_count",
+          "expr": "avail_header_extension_builder_commitment_build_time_sum{chain=\"$chain\"}/avail_header_extension_builder_commitment_build_time_count{chain=\"$chain\"}",
           "legendFormat": "Avail Node Microseconds (µs)",
           "range": true,
           "refId": "A"
@@ -1549,6 +1591,7 @@
             "mode": "palette-classic"
           },
           "custom": {
+            "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
             "axisLabel": "",
@@ -1562,6 +1605,7 @@
               "tooltip": false,
               "viz": false
             },
+            "insertNulls": false,
             "lineInterpolation": "linear",
             "lineWidth": 1,
             "pointSize": 3,
@@ -1624,7 +1668,7 @@
           },
           "editorMode": "code",
           "exemplar": true,
-          "expr": "rate(substrate_tasks_polling_duration_bucket[5m])",
+          "expr": "rate(substrate_tasks_polling_duration_bucket{chain=\"$chain\"}[5m])",
           "interval": "",
           "legendFormat": "{{task_name}}",
           "range": true,
@@ -1678,7 +1722,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "9.3.2",
+      "pluginVersion": "10.4.2",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1694,7 +1738,7 @@
           },
           "editorMode": "code",
           "exemplar": true,
-          "expr": "rate(substrate_tasks_polling_started_total[1m]) - rate(substrate_tasks_polling_duration_count[1m])",
+          "expr": "rate(substrate_tasks_polling_started_total{chain=\"$chain\"}[1m]) - rate(substrate_tasks_polling_duration_count{chain=\"$chain\"}[1m])",
           "interval": "",
           "legendFormat": "{{task_name}}",
           "range": true,
@@ -1758,6 +1802,7 @@
             "mode": "palette-classic"
           },
           "custom": {
+            "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
             "axisLabel": "",
@@ -1771,6 +1816,7 @@
               "tooltip": false,
               "viz": false
             },
+            "insertNulls": false,
             "lineInterpolation": "linear",
             "lineWidth": 1,
             "pointSize": 5,
@@ -1831,8 +1877,8 @@
             "type": "prometheus",
             "uid": "${DS_PROMETHEUS}"
           },
-          "editorMode": "builder",
-          "expr": "substrate_finality_grandpa_communication_gossip_validator_messages",
+          "editorMode": "code",
+          "expr": "substrate_finality_grandpa_communication_gossip_validator_messages{chain=\"$chain\"}",
           "legendFormat": "{{message}} : {{action}}",
           "range": true,
           "refId": "A"
@@ -1889,17 +1935,19 @@
           "fields": "",
           "values": false
         },
-        "textMode": "auto"
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
       },
-      "pluginVersion": "9.3.2",
+      "pluginVersion": "10.4.2",
       "targets": [
         {
           "datasource": {
             "type": "prometheus",
             "uid": "${DS_PROMETHEUS}"
           },
-          "editorMode": "builder",
-          "expr": "substrate_finality_grandpa_precommits_total",
+          "editorMode": "code",
+          "expr": "substrate_finality_grandpa_precommits_total{chain=\"$chain\"}",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -1956,17 +2004,19 @@
           "fields": "",
           "values": false
         },
-        "textMode": "auto"
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
       },
-      "pluginVersion": "9.3.2",
+      "pluginVersion": "10.4.2",
       "targets": [
         {
           "datasource": {
             "type": "prometheus",
             "uid": "${DS_PROMETHEUS}"
           },
-          "editorMode": "builder",
-          "expr": "substrate_network_gossip_expired_messages_total",
+          "editorMode": "code",
+          "expr": "substrate_network_gossip_expired_messages_total{chain=\"$chain\"}",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -2023,17 +2073,19 @@
           "fields": "",
           "values": false
         },
-        "textMode": "auto"
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
       },
-      "pluginVersion": "9.3.2",
+      "pluginVersion": "10.4.2",
       "targets": [
         {
           "datasource": {
             "type": "prometheus",
             "uid": "${DS_PROMETHEUS}"
           },
-          "editorMode": "builder",
-          "expr": "substrate_finality_grandpa_prevotes_total",
+          "editorMode": "code",
+          "expr": "substrate_finality_grandpa_prevotes_total{chain=\"$chain\"}",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -2090,17 +2142,19 @@
           "fields": "",
           "values": false
         },
-        "textMode": "auto"
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
       },
-      "pluginVersion": "9.3.2",
+      "pluginVersion": "10.4.2",
       "targets": [
         {
           "datasource": {
             "type": "prometheus",
             "uid": "${DS_PROMETHEUS}"
           },
-          "editorMode": "builder",
-          "expr": "substrate_finality_grandpa_round",
+          "editorMode": "code",
+          "expr": "substrate_finality_grandpa_round{chain=\"$chain\"}",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -2111,11 +2165,74 @@
     }
   ],
   "refresh": false,
-  "schemaVersion": 37,
-  "style": "dark",
+  "schemaVersion": 39,
   "tags": [],
   "templating": {
-    "list": []
+    "list": [
+      {
+        "current": {
+          "selected": false,
+          "text": "Prometheus",
+          "value": "PBFA97CFB590B2093"
+        },
+        "hide": 2,
+        "includeAll": false,
+        "multi": false,
+        "name": "DATA_SOURCE",
+        "options": [],
+        "query": "prometheus",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "type": "datasource"
+      },
+      {
+        "current": {},
+        "datasource": {
+          "type": "prometheus",
+          "uid": "${DS_PROMETHEUS}"
+        },
+        "definition": "label_values(substrate_block_height,job)",
+        "hide": 0,
+        "includeAll": false,
+        "multi": false,
+        "name": "job",
+        "options": [],
+        "query": {
+          "qryType": 1,
+          "query": "label_values(substrate_block_height,job)",
+          "refId": "PrometheusVariableQueryEditor-VariableQuery"
+        },
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {},
+        "datasource": {
+          "type": "prometheus",
+          "uid": "${DS_PROMETHEUS}"
+        },
+        "definition": "label_values(substrate_block_height{job=\"$job\"},chain)",
+        "hide": 0,
+        "includeAll": false,
+        "multi": false,
+        "name": "chain",
+        "options": [],
+        "query": {
+          "qryType": 1,
+          "query": "label_values(substrate_block_height{job=\"$job\"},chain)",
+          "refId": "PrometheusVariableQueryEditor-VariableQuery"
+        },
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      }
+    ]
   },
   "time": {
     "from": "now-5m",
@@ -2137,6 +2254,6 @@
   "timezone": "",
   "title": "Avail Metrics Cumulo",
   "uid": "3Wc1PBySk",
-  "version": 42,
+  "version": 4,
   "weekStart": ""
 }
