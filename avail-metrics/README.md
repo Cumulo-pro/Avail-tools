@@ -10,6 +10,27 @@ Before you start, make sure you have port 9615 open.
 ### Modify the availd.service file  
 /etc/systemd/system/availd.service  
 
+```bash
+ExecStart=/home/arixScum9/avail/avail-node -d /home/arixScum9/avail/avail/node-data --chain turing --name Cumulo --validator --prometheus-port 9615 --prometheus-external
+```
+
+Restart node:  
+```bash
+sudo systemctl daemon-reload
+sudo systemctl restart availd.service
+sudo journalctl -f -u availd.service
+```
+![image](https://github.com/user-attachments/assets/ca1c642a-501b-42ff-84e7-2754ceb46235)
+
+Check prometheus:  
+Open a browser and use the url:9615
+
+Or check it on your server:  
+```bash
+curl http://localhost:9615/metrics
+```
+
+### Configure node_exporter, prometheus
 
 
 ## Avail Metrics
