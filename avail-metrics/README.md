@@ -30,8 +30,20 @@ Or check it on your server:
 curl http://localhost:9615/metrics
 ```
 
-### Configure node_exporter, prometheus
-
+### Configure Prometheus  
+Log in to your Prometheus server and edit the configuration file:  
+/etc/prometheus/prometheus.yml
+```bash
+- job_name: avail_node
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['your_ip:9615']
+```
+Restart Prometheus:  
+```bash
+sudo systemctl restart prometheus
+sudo journalctl -u prometheus -f --no-hostname -o cat
+```
 
 ## Avail Metrics
 
