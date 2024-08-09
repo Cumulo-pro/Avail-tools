@@ -59,6 +59,6 @@ The Grafana dashboard for Avail metrics provides an interactive, real-time visua
 
 You can download the Grafana dashboard from the link below:
 
-[![Grafana Dashboard](https://img.shields.io/badge/Grafana%20Dashboard-Download-blue?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Cumulo-pro/Avail-tools/blob/main/avail-metrics/Avail%20Metrics%20Cumulo-1718906445659.json)
+[![Grafana Dashboard](https://img.shields.io/badge/Grafana%20Dashboard-Download-blue?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Cumulo-pro/Avail-tools/blob/main/avail-metrics/Avail%20Metrics%20Cumulo%20v2-1723220570495.json)
 
 ---
