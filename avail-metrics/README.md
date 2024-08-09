@@ -3,6 +3,15 @@
 
 This repository contains detailed information about Avail metrics and the associated Grafana dashboard.
 
+## First steps 
+
+Before you start, make sure you have port 9615 open.  
+
+### Modify the availd.service file  
+/etc/systemd/system/availd.service  
+
+
+
 ## Avail Metrics
 
 Avail metrics provide essential information for monitoring and evaluating the performance and status of the Avail network. These metrics cover a wide range of aspects, from block height to total bandwidth usage.
