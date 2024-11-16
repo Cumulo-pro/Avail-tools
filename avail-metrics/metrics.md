@@ -269,6 +269,19 @@ This metric shows the number of pending requests for authority addresses in the 
 
 ![image](https://github.com/user-attachments/assets/f751a087-7be0-4ee3-89e3-5334768d9385)
 
+### DHT Events Received by Authority Discovery  
+
+__substrate_authority_discovery_dht_event_received__  
+
+This metric tracks the number of Distributed Hash Table (DHT) events received by the authority discovery system. Each event type represents different outcomes in DHT operations, such as successfully finding or storing values, which are essential for maintaining network connectivity.  
+
+Values
+•	value_found: The number of times a requested value was found in the DHT.  
+•	value_not_found: The number of times a requested value was not found in the DHT.  
+•	value_put: The number of times a value was successfully stored in the DHT.  
+•	value_put_failed: The number of times an attempt to store a value in the DHT failed.  
+
+![image](https://github.com/user-attachments/assets/28a6b88a-88ce-43e0-999d-b62be0e2f69a)
 
 
 
