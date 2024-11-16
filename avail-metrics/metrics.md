@@ -2,6 +2,8 @@
 
 ## Table of contents
 
+### Overview
+
 1. [Block Height](#block-height)
 2. [Average Block Proposal Time](#average-block-proposal-time)
 3. [Average Block Construction Time](#average-block-construction-time)
@@ -26,9 +28,13 @@
 22. [Grandpa Finality Round](#grandpa-finality-round)
 23. [Total Gossip Expired](#total-gossip-expired)
 
-________________________________________________________________________________________________________________
 
-## Block Height
+![linea transpa](https://github.com/user-attachments/assets/eda24507-f888-406b-ad16-511bd2e23d4c)
+
+
+## Overview
+
+### Block Height
 __substrate_block_height__  
 - best: This is the most recent block that the node considers to be the best known block.
 - finalised: This is the last block that has been finalised and confirmed as a permanent part of the chain.
