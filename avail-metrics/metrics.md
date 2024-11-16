@@ -283,6 +283,23 @@ Values
 
 ![image](https://github.com/user-attachments/assets/28a6b88a-88ce-43e0-999d-b62be0e2f69a)
 
+### External Addresses Last Published  
+
+__substrate_authority_discovery_amount_external_addresses_last_published__  
+
+This metric provides the count of external addresses that were published the last time authority discovery updated addresses in the network. It shows the current number of addresses made available by the authority discovery mechanism, which helps other network participants connect and maintain communication with the node.  
+
+![image](https://github.com/user-attachments/assets/50416642-f579-44b4-ac1c-e04ff88decb0)
+
+### Total Authority Addresses Requested  
+
+__substrate_authority_discovery_authority_addresses_requested_total__
+
+This metric shows the total number of times the authority discovery system has requested external addresses of a single authority node within the network. Each request represents an instance where the network attempted to retrieve the address information of a specific authority, which is essential for maintaining node connectivity.
+An unexpectedly high or rapidly increasing count could indicate frequent address loss or issues with address retention, prompting more requests than usual. Monitoring this can help identify if connectivity problems are emerging.  
+
+![image](https://github.com/user-attachments/assets/fe65a020-569b-45a9-a6f6-01558b161834)
+
 
 
 
