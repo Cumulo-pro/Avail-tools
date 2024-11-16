@@ -5,6 +5,9 @@
 ### Overview
 
 1. [Block Height](#block-height)
+
+### Node metrics
+
 2. [Average Block Proposal Time](#average-block-proposal-time)
 3. [Average Block Construction Time](#average-block-construction-time)
 4. [Peers Connected](#peers-connected)
@@ -41,18 +44,31 @@ __substrate_block_height__
 - sync_target (sync target): This is the block height target that the node is trying to reach during synchronisation.  
 ![image](https://github.com/Cumulo-pro/Avail-tools/assets/2853158/65b3e3b6-7f55-4d5a-8001-38485faeb1ae)
 
-## Average Block Proposal Time
+### Build Info   
+__substrate_build_info__   
+This metric provides static information about the build and network configuration of a Substrate-based node. This metric is useful for identifying the node's software version and network configuration, assisting in debugging and monitoring.  
+
+•	Moniker: Indicates the name of the node or project running.  
+•	Node Version: Represents the specific version of the node software in use.  
+•	Chain Id: Specifies the blockchain network the node is connected t.o  
+
+![image](https://github.com/user-attachments/assets/7fb1bff4-c773-4259-8b37-f5bf96222c1e)
+
+
+## Node metrics
+
+### Average Block Proposal Time
 __substrate_proposer_block_proposal_time_sum/substrate_proposer_block_proposal_time_count__  
 This metric measures the time it takes to build a block and prepare it for the proposal.  
 ![image](https://github.com/Cumulo-pro/Avail-tools/assets/2853158/4f125ae2-de9c-474a-b3aa-1ad88b1bdd5b)
 
 
-## Average Block Construction Time
+### Average Block Construction Time
 __substrate_proposer_block_constructed_sum/substrate_proposer_block_constructed_count__  
 Time it takes to build blocks in the network. This metric is useful for monitoring the efficiency of the block building process.  
 ![image](https://github.com/Cumulo-pro/Avail-tools/assets/2853158/180fd64e-7c95-43b5-9cd6-a1a5e967323a)
 
-## peers Connected
+### peers Connected
 __substrate_sub_libp2p_peers_count__ 
 This metric indicates the number of peers connected to the network.
 
