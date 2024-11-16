@@ -260,6 +260,17 @@ If this count is unusually low or stagnant, it might indicate issues with addres
 
 ![image](https://github.com/user-attachments/assets/0d72abfd-54db-41ea-ba36-53fdbd21ecf9)
 
+### Pending Authority Address Requests  
+
+__substrate_authority_discovery_authority_address_requests_pending__  
+
+This metric shows the number of pending requests for authority addresses in the network. Pending requests represent attempts by nodes to obtain addresses of other authorized nodes (or “authorities”) in the network that have not yet been resolved.
+0 – This indicates that there are currently no pending requests for authority addresses in the network.  
+
+![image](https://github.com/user-attachments/assets/f751a087-7be0-4ee3-89e3-5334768d9385)
+
+
+
 
 
 
