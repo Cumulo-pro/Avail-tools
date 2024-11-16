@@ -251,4 +251,15 @@ This metric shows the current number of authority nodes known to the authority d
 
 ![image](https://github.com/user-attachments/assets/1e2f6bc1-5276-47fc-b3a1-a4ece127f457)
 
+### Total Times External Addresses Published  
+
+__substrate_authority_discovery_times_published_total__  
+
+This metric shows the total number of times the authority discovery system has published external addresses for the nodes in the network. Each publication event makes the node's external addresses available to other network participants, enhancing connectivity.
+If this count is unusually low or stagnant, it might indicate issues with address publication, potentially affecting other nodes' ability to connect.  
+
+![image](https://github.com/user-attachments/assets/0d72abfd-54db-41ea-ba36-53fdbd21ecf9)
+
+
+
 
