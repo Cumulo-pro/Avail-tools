@@ -235,10 +235,20 @@ A high number of expired messages may indicate network overload or problems in m
 ## Authority Discovery
 
 ### Failures Handling 'Value Found' Events in DHT  
+
 __substrate_authority_discovery_handle_value_found_event_failure__  
 
 This metric shows the number of times the authority discovery system failed to handle a value_found event in the Distributed Hash Table (DHT). A failure in handling these events means that, although a requested value was found in the DHT, an error occurred during its processing.
 Value: 0 – Indicates that no failures have been recorded when handling value_found events so far.
 
 ![image](https://github.com/user-attachments/assets/92f76838-56cc-4da2-b755-a9b9204f3a66)
+
+### Known Authorities Count
+
+__substrate_authority_discovery_known_authorities_count__
+
+This metric shows the current number of authority nodes known to the authority discovery system in the network. Known authorities are nodes that have been identified and stored by the system, allowing for reliable connections and communication across the network.  
+
+![image](https://github.com/user-attachments/assets/1e2f6bc1-5276-47fc-b3a1-a4ece127f457)
+
 
