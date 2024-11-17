@@ -74,20 +74,6 @@ Time it takes to build blocks in the network. This metric is useful for monitori
 
 ![image](https://github.com/Cumulo-pro/Avail-tools/assets/2853158/180fd64e-7c95-43b5-9cd6-a1a5e967323a)
 
-### peers Connected
-__substrate_sub_libp2p_peers_count__ 
-
-This metric indicates the number of peers connected to the network.
-
-![image](https://github.com/Cumulo-pro/Avail-tools/assets/2853158/7a9c1469-237b-48b0-bbd5-098b08966eec)
-
-### peers Discovered
-__substrate_sub_libp2p_peerset_num_discovered__  
-
-Indicates the current number of nodes (or peers) that have been discovered and are stored in the peerset manager.  
-
-![image](https://github.com/Cumulo-pro/Avail-tools/assets/2853158/c012ddc5-580d-4381-8386-530ed1f8b08c)
-
 ### Major Syncing  
 __substrate_sub_libp2p_is_major_syncing__
 
@@ -143,6 +129,29 @@ Indicates the size of the state cache in bytes.
 This metric is useful for monitoring memory resource usage on network nodes. An excessively large cache size may indicate the need to adjust the cache configuration.  
 
 ![image](https://github.com/Cumulo-pro/Avail-tools/assets/2853158/a4ea6776-d17b-4c60-b7b4-43d6dfa7fcb6)
+
+
+
+
+
+![linea transpa](https://github.com/user-attachments/assets/eda24507-f888-406b-ad16-511bd2e23d4c)
+
+## Node Connectivity
+
+### peers Connected
+__substrate_sub_libp2p_peers_count__ 
+
+This metric indicates the number of peers connected to the network.
+
+![image](https://github.com/Cumulo-pro/Avail-tools/assets/2853158/7a9c1469-237b-48b0-bbd5-098b08966eec)
+
+### peers Discovered
+__substrate_sub_libp2p_peerset_num_discovered__  
+
+Indicates the current number of nodes (or peers) that have been discovered and are stored in the peerset manager.  
+
+![image](https://github.com/Cumulo-pro/Avail-tools/assets/2853158/c012ddc5-580d-4381-8386-530ed1f8b08c)
+
 
 ### Total Bandwidth Usage 
 __substrate_sub_libp2p_network_bytes_total__  
