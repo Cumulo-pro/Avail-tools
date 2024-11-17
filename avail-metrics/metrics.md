@@ -57,6 +57,37 @@ This metric provides static information about the build and network configuratio
 
 ![image](https://github.com/user-attachments/assets/7fb1bff4-c773-4259-8b37-f5bf96222c1e)
 
+### RPC Sessions Closed  
+__substrate_rpc_sessions_closed__  
+
+This metric tracks the total number of persistent RPC (Remote Procedure Call) sessions that have been closed by the node. Low Value (0): Indicates that no sessions have been terminated, suggesting a stable connection.  
+
+![image](https://github.com/user-attachments/assets/81f2f677-af95-4c55-8047-98796c071ee3)
+
+### RPC Sessions Opened
+__substrate_rpc_sessions_opened__  
+
+This metric tracks the total number of persistent RPC (Remote Procedure Call) sessions opened by the node. 0 indicates that no persistent RPC sessions have been opened.  
+
+![image](https://github.com/user-attachments/assets/6cd7654b-2907-4bfb-9038-f54739af5be5)
+
+### Node Role  
+__substrate_node_roles__  
+
+Indicates the roles the node is configured to perform within the network. The numeric value corresponds to a specific role or combination of roles the node is performing.  
+•  0: None (No roles assigned)  
+•  1: Full Node (Participates in block propagation but does not produce blocks)  
+•  2: Light Client (Downloads only block headers and necessary state)  
+•  4: Authority (Validator or other authority roles)  
+
+![image](https://github.com/user-attachments/assets/ee474572-c930-403e-baf1-e55a7a1cdd43)
+
+
+
+
+
+![linea transpa](https://github.com/user-attachments/assets/eda24507-f888-406b-ad16-511bd2e23d4c)
+
 
 ## Node metrics
 
