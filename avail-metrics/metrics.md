@@ -152,6 +152,101 @@ Indicates the current number of nodes (or peers) that have been discovered and a
 
 ![image](https://github.com/Cumulo-pro/Avail-tools/assets/2853158/c012ddc5-580d-4381-8386-530ed1f8b08c)
 
+### Incoming Connections Handshake Errors
+__substrate_sub_libp2p_incoming_connections_handshake_errors_total__   
+
+This metric tracks the total number of incoming Libp2p connections that failed during the initial handshake phase. Failures are categorized by their reason.   
+•  limit-reached: Connection rejected because the node reached its maximum allowed number of connections.   
+•  transport-error: Failure due to a transport-level error.   
+
+This metric helps monitor issues that occur when peers attempt to establish a connection with the node.   
+•	High limit-reached Value: Indicates the node is frequently reaching its maximum connection limit. Adjusting limits or scaling resources may be necessary.   
+•	High transport-error Value: Suggests potential networking issues, such as peer misconfiguration or unstable network conditions.   
+
+![image](https://github.com/user-attachments/assets/45e39eac-bc9e-4983-af0b-cda95a0f0712)
+
+### Local Addresses Listening  
+__substrate_sub_libp2p_listeners_local_addresses__  
+
+This metric tracks the total number of local addresses (network interfaces) where the node is actively listening for incoming Libp2p connections.
+
+![image](https://github.com/user-attachments/assets/e576de9c-f08c-4f5b-b86c-bb9bb4c994a2)
+
+### Pending Connections  
+__substrate_sub_libp2p_pending_connections__  
+
+This metric measures the number of pending connections that are in the process of being established on the node using the Libp2p protocol.
+Pending connections represent active attempts to establish communication with other nodes. This includes the initial negotiation time, such as the handshake and the configuration of the communication channel.  
+
+![image](https://github.com/user-attachments/assets/83924721-3d55-46c9-aee1-e6e53ec40b37)
+
+### Pending Connection Errors
+__substrate_sub_libp2p_pending_connections_errors_total__  
+
+This metric measures the total number of errors that occurred during the establishment of pending connections, categorized by the reason for the error.  
+•	invalid-peer-id: Invalid peer ID.  
+•	limit-reached: The limit of allowed connections has been reached.  
+•	transport-error: Error in the transport layer, such as network failures or disconnections.  
+
+![image](https://github.com/user-attachments/assets/fe1b988c-76b3-4ace-804c-c76c7845d169)
+
+### Libp2p Distinct Peers Connections (Closed & Opened)  
+
+**Connections Closed with Distinct Peers**  
+__substrate_sub_libp2p_distinct_peers_connections_closed_total__  
+
+This metric indicates how many distinct peers have disconnected from the node. A high value could result from frequent network rebalancing, churn, or instability.  
+
+**Connections Opened with Distinct Peers**  
+__substrate_sub_libp2p_distinct_peers_connections_opened_total__  
+
+This metric shows how many distinct peers the node has successfully connected to. A high value indicates active participation in the network and frequent peer interactions.  
+
+![image](https://github.com/user-attachments/assets/ec92aa1d-f461-4b4d-bad9-75964fdbc870)
+ 
+### Incoming Connections Total  
+__rate(substrate_sub_libp2p_incoming_connections_total{job="$job"}[5m])__  
+
+This metric tracks the rate of new connections on the node's listening sockets.  
+This metric measures the overall activity of incoming connections, helping to assess the node's exposure and interaction with peers.
+High Value: Indicates frequent connection attempts, suggesting active participation in the network.  
+
+![image](https://github.com/user-attachments/assets/cf3504b0-4508-417b-ba63-d219abe98781)
+
+### Listeners Errors Total  
+__rate(substrate_sub_libp2p_listeners_errors_total{job="$job"}[5m])__  
+
+This metric tracks the total number of non-fatal errors encountered by Libp2p listeners on the node. Low or Zero Value (0): Indicates stable operation with no non-fatal errors detected.
+
+![image](https://github.com/user-attachments/assets/e7a028d7-ef6d-434c-8ddb-133be770e90f)
+
+### Libp2p Connections Closed Total  
+__substrate_sub_libp2p_connections_closed_total__  
+
+This metric tracks the total number of Libp2p connections that have been closed, categorized by direction and reason.  
+
+•  keep-alive-timeout: Connection closed due to inactivity.  
+•  ping-timeout: Connection closed because of an unresponsive peer.  
+•  protocol-error: Connection closed because of a protocol violation.  
+•  sync-notifications-clogged: Notifications queue overflowed.  
+•  transport-error: Connection closed due to a transport-level error.  
+
+![image](https://github.com/user-attachments/assets/1c4fa564-e031-4042-aea4-bb653055dfe4)
+
+### Libp2p Connections Opened Total  
+__substrate_sub_libp2p_connections_opened_total__  
+
+This metric tracks the total number of Libp2p connections opened by the node, categorized by direction. Direction: Specifies whether the connection was inbound (in) or outbound (out)  
+
+![image](https://github.com/user-attachments/assets/9811eca5-f14c-47d9-8ed5-82c03e17a12e)
+
+
+
+
+
+
+
+![linea transpa](https://github.com/user-attachments/assets/eda24507-f888-406b-ad16-511bd2e23d4c)
 
 ### Total Bandwidth Usage 
 __substrate_sub_libp2p_network_bytes_total__  
