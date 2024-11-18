@@ -428,6 +428,14 @@ This metric is useful for identifying potential issues with message processing e
 
 ![image](https://github.com/user-attachments/assets/aacb73c1-d416-4bac-9ead-3ebee5e21d04)
 
+###  Justification Import Time  
+__substrate_justification_import_time_bucket__  
+
+Indicates the time taken to import justifications in GRANDPA. This metric is critical for monitoring the performance of the node in processing finality proofs. Lower times indicate that justifications are being processed efficiently, which is essential for maintaining finality performance.  
+The metric categorizes the time taken into different buckets (le, or "less than or equal to") for specific thresholds in seconds.  
+
+![image](https://github.com/user-attachments/assets/52cb9468-6a9b-47a7-8932-a0f0b9774b11)
+
 
 
 
