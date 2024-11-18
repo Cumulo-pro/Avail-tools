@@ -285,9 +285,6 @@ This metric tracks the total number of Libp2p connections opened by the node, ca
 ![linea transpa](https://github.com/user-attachments/assets/eda24507-f888-406b-ad16-511bd2e23d4c)
 
 
-
-
-
 ## Avail Node Stats
 
 ### Task Polling Duration 
@@ -307,6 +304,28 @@ Calculates the difference between the start rate and the completion rate of Futu
 -A value close to zero suggests that the number of initiated and completed invocations is balanced.  
 
 ![image](https://github.com/Cumulo-pro/Avail-tools/assets/2853158/5314f0ad-ba78-4f3b-9a7f-944cc4487236)
+
+### Active Internal Broadcast Channels  
+__substrate_sub_libp2p_out_events_num_channels__  
+
+This metric tracks the number of active internal channels that are transmitting network events using the Libp2p protocol.  
+Name: Identifies the module associated to the channel.  
+
+![image](https://github.com/user-attachments/assets/7e7eecce-e334-42cf-90a8-f0326fc536bf)
+
+### Issued Light Client Requests 
+__substrate_issued_light_requests__  
+
+This metric tracks how many requests the node has sent to light clients for synchronization or data retrieval. A value of 0 means no requests have been made, which may indicate that no light clients are connected or requesting data. An increasing value shows active communication with light clients.  
+This metric is useful for monitoring the node's interaction with light clients, especially in networks that prioritize lightweight synchronization and efficiency.  
+
+![image](https://github.com/user-attachments/assets/10c9c9d8-155a-4f37-989c-a5fcee8e7d2f)
+
+
+
+![linea transpa](https://github.com/user-attachments/assets/eda24507-f888-406b-ad16-511bd2e23d4c)
+
+## GRANDPA
 
 ### GRANDPA's gossip
 __substrate_finality_grandpa_communication_gossip_validator_messages__  
