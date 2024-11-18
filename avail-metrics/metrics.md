@@ -420,6 +420,20 @@ A high number of expired messages may indicate network overload or problems in m
 
 ![image](https://github.com/Cumulo-pro/Avail-tools/assets/2853158/2a6c7f06-56f3-4c11-bc21-fd57a18b3c7c)
 
+### Finality Grandpa Waiting Messages  
+__substrate_finality_grandpa_until_imported_waiting_messages_number__  
+
+Indicates the number of GRANDPA (GHOST-based Recursive ANcestor Deriving Prefix Agreement) finality messages that are waiting in the "until imported" queue. These messages are pending processing before being imported into the node. An increasing value may signal delays or bottlenecks in message processing, which could be due to network congestion or node performance issues. Monitoring this metric helps ensure the efficient processing of finality messages and the smooth operation of the network's consensus protocol.  
+This metric is useful for identifying potential issues with message processing efficiency, especially in high-traffic scenarios. Monitoring this value can help ensure that finality processes operate smoothly.  
+
+![image](https://github.com/user-attachments/assets/aacb73c1-d416-4bac-9ead-3ebee5e21d04)
+
+
+
+
+![linea transpa](https://github.com/user-attachments/assets/eda24507-f888-406b-ad16-511bd2e23d4c)
+
+
 ## Authority Discovery
 
 ### Failures Handling 'Value Found' Events in DHT  
