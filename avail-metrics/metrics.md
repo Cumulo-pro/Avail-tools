@@ -149,7 +149,22 @@ __substrate_number_leaves__
 
 Measures the number of forks in the chain. An increase in the number of forks may indicate consensus problems or possible attacks on the network. Maintaining a low and stable number of forks is generally a sign of a healthy network.  
 
+### Import Queue Processed Total  
+__substrate_import_queue_processed_total__  
+
+This metric is a counter that accumulates the total number of blocks the node has processed through the import queue. A higher value indicates that the node is actively processing blocks. Monitoring this metric can help track the node's performance and activity over time.
+Useful for ensuring the import queue is functioning properly and processing blocks without delays or failures. Anomalies, such as a stagnating value, might indicate issues in the queue or synchronization.  
+
+![image](https://github.com/user-attachments/assets/0e934e11-8ff9-400d-8da0-bc2c558327dc)
+
+
+
+
+
 ![image](https://github.com/Cumulo-pro/Avail-tools/assets/2853158/dc0e1678-c6d7-4dd8-9fe6-518b37dbed97)
+
+
+
 
 ## State System
 
