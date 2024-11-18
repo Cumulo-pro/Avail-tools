@@ -161,8 +161,6 @@ Useful for ensuring the import queue is functioning properly and processing bloc
 
 
 
-![image](https://github.com/Cumulo-pro/Avail-tools/assets/2853158/dc0e1678-c6d7-4dd8-9fe6-518b37dbed97)
-
 
 
 
@@ -320,6 +318,62 @@ This metric tracks how many requests the node has sent to light clients for sync
 This metric is useful for monitoring the node's interaction with light clients, especially in networks that prioritize lightweight synchronization and efficiency.  
 
 ![image](https://github.com/user-attachments/assets/10c9c9d8-155a-4f37-989c-a5fcee8e7d2f)
+
+
+
+![linea transpa](https://github.com/user-attachments/assets/eda24507-f888-406b-ad16-511bd2e23d4c)
+
+## mempool stats
+
+### Transactions Pruned by Block Events   
+__substrate_sub_txpool_block_transactions_pruned__  
+
+This metric measures the total number of transactions removed from the mempool (transaction pool) due to block-related events.
+When a block is finalized or imported, the transactions included in that block are removed from the mempool. This metric tracks how many transactions were removed due to these events.  
+
+![image](https://github.com/user-attachments/assets/a1e03e30-ebce-45b2-b1aa-c50f04421b54)
+
+
+### Transactions Resubmitted by Block Events  
+__substrate_sub_txpool_block_transactions_resubmitted__  
+
+This metric measures the total number of transactions forwarded to the mempool due to block-related events.  
+When a block is processed, some transactions in the mempool may not be included in the block for various reasons (e.g., lack of space, low priorities). These transactions may be evaluated and resubmitted for inclusion in future blocks.  
+
+![image](https://github.com/user-attachments/assets/69885d7b-428d-464e-8cb4-9b1f9c5e4d18)
+
+### Transactions Submitted  
+__substrate_sub_txpool_submitted_transactions__  
+
+This metric measures the total number of transactions sent to the node's mempool.
+
+![image](https://github.com/user-attachments/assets/5b6e0a59-3de7-42d5-b5dd-ff53955df3f1)
+
+### Transactions Rate Validations Finished  
+__rate(substrate_sub_txpool_validations_finished{chain="avail_turing_network"}[5m])__  
+
+This metric measures the rate  total number of transactions that have completed the validation process in the mempool.
+Node Activity Indicator: A high volume of validations indicates that the node is actively processing transactions.  
+
+![image](https://github.com/user-attachments/assets/127ecb55-31d9-4cc7-856b-0f8000f77e3f)
+
+###  Invalid Transactions Removed  
+__rate(substrate_sub_txpool_validations_invalid{job="$job"}[5m])__  
+
+This metric measures the total number of transactions removed from the mempool because they were considered invalid during the validation process.  
+During the validation process, transactions in the mempool are evaluated according to the rules of the blockchain protocol. If a transaction does not comply with these rules, it is marked as invalid and removed from the mempool.  
+
+![image](https://github.com/user-attachments/assets/59b3eda8-16c0-4c41-87da-d078826bc23f)
+
+###  Transactions Scheduled for Validation  
+__substrate_sub_txpool_validations_scheduled__  
+
+This metric measures the total number of transactions scheduled for the validation process in the mempool.  
+This metric tracks all transactions that have been entered into the mempool and have been scheduled to be validated. A scheduled transaction has not yet been processed, but is in the queue to determine its validity.  
+
+![image](https://github.com/user-attachments/assets/93a619eb-5aa2-4a07-b4f2-0250a89b6d9d)
+
+
 
 
 
