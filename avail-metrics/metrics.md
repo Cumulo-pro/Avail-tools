@@ -166,16 +166,6 @@ Useful for ensuring the import queue is functioning properly and processing bloc
 
 
 
-## State System
-
-### State Cache
-__substrate_state_cache_bytes__ 
-
-Indicates the size of the state cache in bytes.  
-This metric is useful for monitoring memory resource usage on network nodes. An excessively large cache size may indicate the need to adjust the cache configuration.  
-
-![image](https://github.com/Cumulo-pro/Avail-tools/assets/2853158/a4ea6776-d17b-4c60-b7b4-43d6dfa7fcb6)
-
 
 
 
@@ -294,34 +284,9 @@ This metric tracks the total number of Libp2p connections opened by the node, ca
 
 ![linea transpa](https://github.com/user-attachments/assets/eda24507-f888-406b-ad16-511bd2e23d4c)
 
-### Total Bandwidth Usage 
-__substrate_sub_libp2p_network_bytes_total__  
 
-This metric indicates the total bandwidth usage of the libp2p network in bytes. This information is crucial for monitoring, optimising and ensuring network performance.  
 
-![image](https://github.com/Cumulo-pro/Avail-tools/assets/2853158/7a2fb4ef-251a-4541-9e4f-74f56c2d5a16)
 
-### Evaluation Grid Build Time
-__avail_header_extension_builder_evaluation_grid_build_time_sum/avail_header_extension_builder_evaluation_grid_build_time_count__  
-
-This metric measures the average time required to build the header extension evaluation grid on an avail_turing_network node.  Building the evaluation grid" refers to the creation of a data structure that organises and evaluates the information in the data block or transactions. This structure can be used for various purposes, including network validation, verification and optimisation.  
-
-![image](https://github.com/Cumulo-pro/Avail-tools/assets/2853158/6ba95d3c-2951-4575-9d75-98872174fe39)
-
-### Average execution time
-__avail_header_extension_builder_total_execution_time_sum/avail_header_extension_builder_total_execution_time_count__  
-
-This metric measures the total execution time for the construction of the header extension, the time is reported in microseconds. This metric provides a clear view of the performance of the node in terms of total execution time for the header extension construction.  
-
-![image](https://github.com/Cumulo-pro/Avail-tools/assets/2853158/dbfaa3af-0436-4128-ab0f-34dc3bca65e5)
-
-### Average time to build commitment
-__avail_header_extension_builder_commitment_build_time_sum/avail_header_extension_builder_commitment_build_time_count__  
-
-Average time to build the header extension commitment on a node in the avail_turing_network network.
-This metric provides a clear view of node performance in terms of building header extension commitment, helping to maintain efficiency and proactively detect potential problems.  
-
-![image](https://github.com/Cumulo-pro/Avail-tools/assets/2853158/3c04efb3-6652-4c2d-8da5-3eda74a9a920)
 
 ## Avail Node Stats
 
@@ -451,6 +416,47 @@ An unexpectedly high or rapidly increasing count could indicate frequent address
 ![image](https://github.com/user-attachments/assets/fe65a020-569b-45a9-a6f6-01558b161834)
 
 
+
+![linea transpa](https://github.com/user-attachments/assets/eda24507-f888-406b-ad16-511bd2e23d4c)
+
+## State System
+
+### State Cache
+__substrate_state_cache_bytes__ 
+
+Indicates the size of the state cache in bytes.  
+This metric is useful for monitoring memory resource usage on network nodes. An excessively large cache size may indicate the need to adjust the cache configuration.  
+
+![image](https://github.com/Cumulo-pro/Avail-tools/assets/2853158/a4ea6776-d17b-4c60-b7b4-43d6dfa7fcb6)
+
+### Total Bandwidth Usage 
+__substrate_sub_libp2p_network_bytes_total__  
+
+This metric indicates the total bandwidth usage of the libp2p network in bytes. This information is crucial for monitoring, optimising and ensuring network performance.  
+
+![image](https://github.com/Cumulo-pro/Avail-tools/assets/2853158/7a2fb4ef-251a-4541-9e4f-74f56c2d5a16)
+
+### Evaluation Grid Build Time
+__avail_header_extension_builder_evaluation_grid_build_time_sum/avail_header_extension_builder_evaluation_grid_build_time_count__  
+
+This metric measures the average time required to build the header extension evaluation grid on an avail_turing_network node.  Building the evaluation grid" refers to the creation of a data structure that organises and evaluates the information in the data block or transactions. This structure can be used for various purposes, including network validation, verification and optimisation.  
+
+![image](https://github.com/Cumulo-pro/Avail-tools/assets/2853158/6ba95d3c-2951-4575-9d75-98872174fe39)
+
+### Average execution time
+__avail_header_extension_builder_total_execution_time_sum/avail_header_extension_builder_total_execution_time_count__  
+
+This metric measures the total execution time for the construction of the header extension, the time is reported in microseconds. This metric provides a clear view of the performance of the node in terms of total execution time for the header extension construction.  
+
+![image](https://github.com/Cumulo-pro/Avail-tools/assets/2853158/dbfaa3af-0436-4128-ab0f-34dc3bca65e5)
+
+### Average time to build commitment
+__avail_header_extension_builder_commitment_build_time_sum/avail_header_extension_builder_commitment_build_time_count__  
+
+Average time to build the header extension commitment on a node in the avail_turing_network network.
+This metric provides a clear view of node performance in terms of building header extension commitment, helping to maintain efficiency and proactively detect potential problems.  
+
+![image](https://github.com/Cumulo-pro/Avail-tools/assets/2853158/3c04efb3-6652-4c2d-8da5-3eda74a9a920)
 
 
 
