@@ -82,7 +82,12 @@ Indicates the roles the node is configured to perform within the network. The nu
 
 ![image](https://github.com/user-attachments/assets/ee474572-c930-403e-baf1-e55a7a1cdd43)
 
+### Process Start Time
+__time() - substrate_process_start_time_seconds__  
 
+Timestamp indicating when the node process was last started
+
+![image](https://github.com/user-attachments/assets/96d68a76-6251-45af-8293-986abf576395)
 
 
 
