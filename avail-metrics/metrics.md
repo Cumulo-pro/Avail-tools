@@ -112,7 +112,12 @@ This metric measures the average time it takes to execute the creation of inhere
 
 ![image](https://github.com/user-attachments/assets/6cd72100-e6a9-413f-adf7-66eaaeb168f1)
 
+### Block Proposal End Reason  
+__substrate_proposer_end_proposal_reason__  
 
+This metric tracks the reasons why block proposing was ended. It provides insight into the conditions under which the block production process completes.
+
+![image](https://github.com/user-attachments/assets/c92f4d00-d70c-44fa-a74b-4f6a07b2e32a)
 
 ### Major Syncing  
 __substrate_sub_libp2p_is_major_syncing__
