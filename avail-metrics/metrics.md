@@ -186,12 +186,20 @@ Useful for ensuring the import queue is functioning properly and processing bloc
 
 ## Node Connectivity
 
-### peers Connected
+### Total Connected Peers
 __substrate_sub_libp2p_peers_count__ 
 
-This metric indicates the number of peers connected to the network.
+Total number of peers connected to the node, regardless of their role. This metric measures all active Libp2p connections, including those not directly participating in synchronization.
 
 ![image](https://github.com/Cumulo-pro/Avail-tools/assets/2853158/7a9c1469-237b-48b0-bbd5-098b08966eec)
+
+### Active Sync Peers  
+__substrate_sync_peers__  
+
+Number of active peers with which the node is currently synchronizing. This metric specifically measures the peers participating in the block synchronization process.
+
+![image](https://github.com/user-attachments/assets/8b27dd76-33e3-4e04-bd34-a6dd7cd44f51)
+
 
 ### peers Discovered
 __substrate_sub_libp2p_peerset_num_discovered__  
