@@ -296,6 +296,12 @@ This metric tracks the total number of Libp2p connections opened by the node, ca
 
 ![image](https://github.com/user-attachments/assets/9811eca5-f14c-47d9-8ed5-82c03e17a12e)
 
+### Transaction Propagation Rate  
+__rate(substrate_sync_propagated_transactions{chain="avail_turing_network"}[5m])__  
+
+This metric measures the rate of transaction propagation per second from the node to other peers in the blockchain network. It allows to analyze the continuous flow of transactions propagated in 5-minute intervals, providing a dynamic view of the node's efficiency and activity in the network.
+
+![image](https://github.com/user-attachments/assets/9b2632bd-5e53-4fec-a16b-2c3fa1c83b2d)
 
 
 
