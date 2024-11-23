@@ -347,6 +347,14 @@ This metric is useful for monitoring the node's interaction with light clients, 
 
 ![image](https://github.com/user-attachments/assets/10c9c9d8-155a-4f37-989c-a5fcee8e7d2f)
 
+###  Queued Blocks in Import Queue  
+__substrate_sync_queued_blocks__  
+
+This metric measures the number of blocks currently in the node's import queue. The import queue is where received blocks wait to be processed and validated before being added to the local blockchain.  
+
+![image](https://github.com/user-attachments/assets/a07394d5-f214-4a95-bdf6-1a3174db0ae9)
+
+
 
 
 ![linea transpa](https://github.com/user-attachments/assets/eda24507-f888-406b-ad16-511bd2e23d4c)
