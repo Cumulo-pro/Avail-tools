@@ -105,6 +105,15 @@ Time it takes to build blocks in the network. This metric is useful for monitori
 
 ![image](https://github.com/Cumulo-pro/Avail-tools/assets/2853158/180fd64e-7c95-43b5-9cd6-a1a5e967323a)
 
+### Average Inherent Creation Time  
+__substrate_proposer_create_inherents_time_sum / substrate_proposer_create_inherents_time_count__  
+
+This metric measures the average time it takes to execute the creation of inherents during block production. Inherents are special extrinsics that are added to blocks without requiring a transaction, such as timestamp updates or session key rotations.
+
+![image](https://github.com/user-attachments/assets/6cd72100-e6a9-413f-adf7-66eaaeb168f1)
+
+
+
 ### Major Syncing  
 __substrate_sub_libp2p_is_major_syncing__
 
