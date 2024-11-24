@@ -2,34 +2,7 @@
 
 ## Table of contents
 
-### Overview
 
-1. [Block Height](#block-height)
-
-### Node metrics
-
-2. [Average Block Proposal Time](#average-block-proposal-time)
-3. [Average Block Construction Time](#average-block-construction-time)
-4. [Peers Connected](#peers-connected)
-5. [Peers Discovered](#peers-discovered)
-6. [Major Syncing](#major-syncing)
-7. [Num Transactions](#num-transactions)
-8. [Number of Transactions in the Queue](#number-of-transactions-in-the-queue)
-9. [Num Blocks Import Queue](#num-blocks-import-queue)
-10. [Queued Blocks](#queued-blocks)
-11. [Number of Known Forks](#number-of-known-forks)
-12. [State Cache](#state-cache)
-13. [Total Bandwidth Usage](#total-bandwidth-usage)
-14. [Evaluation Grid Build Time](#evaluation-grid-build-time)
-15. [Average Execution Time](#average-execution-time)
-16. [Average Time to Build Commitment](#average-time-to-build-commitment)
-17. [Task Polling Duration](#task-polling-duration)
-18. [Polling Rate Imbalance](#polling-rate-imbalance)
-19. [GRANDPA's Gossip](#grandpas-gossip)
-20. [Grandpa Precommits Total](#grandpa-precommits-total)
-21. [Grandpa Prevotes Total](#grandpa-prevotes-total)
-22. [Grandpa Finality Round](#grandpa-finality-round)
-23. [Total Gossip Expired](#total-gossip-expired)
 
 
 ![linea transpa](https://github.com/user-attachments/assets/eda24507-f888-406b-ad16-511bd2e23d4c)
@@ -57,19 +30,6 @@ This metric provides static information about the build and network configuratio
 
 ![image](https://github.com/user-attachments/assets/7fb1bff4-c773-4259-8b37-f5bf96222c1e)
 
-### RPC Sessions Closed  
-__substrate_rpc_sessions_closed__  
-
-This metric tracks the total number of persistent RPC (Remote Procedure Call) sessions that have been closed by the node. Low Value (0): Indicates that no sessions have been terminated, suggesting a stable connection.  
-
-![image](https://github.com/user-attachments/assets/81f2f677-af95-4c55-8047-98796c071ee3)
-
-### RPC Sessions Opened
-__substrate_rpc_sessions_opened__  
-
-This metric tracks the total number of persistent RPC (Remote Procedure Call) sessions opened by the node. 0 indicates that no persistent RPC sessions have been opened.  
-
-![image](https://github.com/user-attachments/assets/6cd7654b-2907-4bfb-9038-f54739af5be5)
 
 ### Node Role  
 __substrate_node_roles__  
@@ -81,6 +41,14 @@ Indicates the roles the node is configured to perform within the network. The nu
 •  4: Authority (Validator or other authority roles)  
 
 ![image](https://github.com/user-attachments/assets/ee474572-c930-403e-baf1-e55a7a1cdd43)
+
+### Major Syncing  
+__substrate_sub_libp2p_is_major_syncing__
+
+This metric indicates whether the node is performing a major synchronisation or not.   
+In a blockchain environment, a major synchronisation can refer to an intensive process where the node catches up with the entire blockchain, downloading and verifying all blocks from the genesis or from a significant fork.  
+
+![image](https://github.com/Cumulo-pro/Avail-tools/assets/2853158/66426365-843d-46ac-ae58-40fec4d9bff9)
 
 ### Process Start Time
 __time() - substrate_process_start_time_seconds__  
@@ -124,13 +92,6 @@ This metric tracks the reasons why block proposing was ended. It provides insigh
 
 ![image](https://github.com/user-attachments/assets/c92f4d00-d70c-44fa-a74b-4f6a07b2e32a)
 
-### Major Syncing  
-__substrate_sub_libp2p_is_major_syncing__
-
-This metric indicates whether the node is performing a major synchronisation or not.   
-In a blockchain environment, a major synchronisation can refer to an intensive process where the node catches up with the entire blockchain, downloading and verifying all blocks from the genesis or from a significant fork.  
-
-![image](https://github.com/Cumulo-pro/Avail-tools/assets/2853158/66426365-843d-46ac-ae58-40fec4d9bff9)
 
 ### Num transactions
 __substrate_proposer_number_of_transactions__
@@ -300,6 +261,20 @@ __substrate_sub_libp2p_connections_opened_total__
 This metric tracks the total number of Libp2p connections opened by the node, categorized by direction. Direction: Specifies whether the connection was inbound (in) or outbound (out)  
 
 ![image](https://github.com/user-attachments/assets/9811eca5-f14c-47d9-8ed5-82c03e17a12e)
+
+### RPC Sessions Closed  
+__substrate_rpc_sessions_closed__  
+
+This metric tracks the total number of persistent RPC (Remote Procedure Call) sessions that have been closed by the node. Low Value (0): Indicates that no sessions have been terminated, suggesting a stable connection.  
+
+![image](https://github.com/user-attachments/assets/81f2f677-af95-4c55-8047-98796c071ee3)
+
+### RPC Sessions Opened
+__substrate_rpc_sessions_opened__  
+
+This metric tracks the total number of persistent RPC (Remote Procedure Call) sessions opened by the node. 0 indicates that no persistent RPC sessions have been opened.  
+
+![image](https://github.com/user-attachments/assets/6cd7654b-2907-4bfb-9038-f54739af5be5)
 
 ### Transaction Propagation Rate  
 __rate(substrate_sync_propagated_transactions{chain="avail_turing_network"}[5m])__  
