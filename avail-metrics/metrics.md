@@ -1,6 +1,83 @@
 # Avail metrics
 
-## Table of contents
+## Table of Contents
+
+- [Overview](#overview)
+  - [Block Height](#block-height)
+  - [Build Info](#build-info)
+  - [Node Role](#node-role)
+  - [Major Syncing](#major-syncing)
+  - [Process Start Time](#process-start-time)
+
+- [Node Metrics](#node-metrics)
+  - [Average Block Proposal Time](#average-block-proposal-time)
+  - [Average Block Construction Time](#average-block-construction-time)
+  - [Average Inherent Creation Time](#average-inherent-creation-time)
+  - [Block Proposal End Reason](#block-proposal-end-reason)
+  - [Number of Transactions](#number-of-transactions)
+  - [Number of Transactions in the Queue](#number-of-transactions-in-the-queue)
+  - [Number of Blocks in Import Queue](#number-of-blocks-in-import-queue)
+  - [Queued Blocks](#queued-blocks)
+  - [Number of Known Forks](#number-of-known-forks)
+  - [Import Queue Processed Total](#import-queue-processed-total)
+
+- [Node Connectivity](#node-connectivity)
+  - [Total Connected Peers](#total-connected-peers)
+  - [Active Sync Peers](#active-sync-peers)
+  - [Peers Discovered](#peers-discovered)
+  - [Incoming Connections Handshake Errors](#incoming-connections-handshake-errors)
+  - [Local Addresses Listening](#local-addresses-listening)
+  - [Pending Connections](#pending-connections)
+  - [Pending Connection Errors](#pending-connection-errors)
+  - [Libp2p Distinct Peers Connections (Closed & Opened)](#libp2p-distinct-peers-connections-closed--opened)
+  - [Incoming Connections Total](#incoming-connections-total)
+  - [Listeners Errors Total](#listeners-errors-total)
+  - [Libp2p Connections Closed Total](#libp2p-connections-closed-total)
+  - [Libp2p Connections Opened Total](#libp2p-connections-opened-total)
+  - [RPC Sessions Closed](#rpc-sessions-closed)
+  - [RPC Sessions Opened](#rpc-sessions-opened)
+  - [Transaction Propagation Rate](#transaction-propagation-rate)
+
+- [Avail Node Stats](#avail-node-stats)
+  - [Task Polling Duration](#task-polling-duration)
+  - [Polling Rate Imbalance](#polling-rate-imbalance)
+  - [Active Internal Broadcast Channels](#active-internal-broadcast-channels)
+  - [Issued Light Client Requests](#issued-light-client-requests)
+  - [Queued Blocks in Import Queue](#queued-blocks-in-import-queue)
+
+- [Mempool Stats](#mempool-stats)
+  - [Transactions Pruned by Block Events](#transactions-pruned-by-block-events)
+  - [Transactions Resubmitted by Block Events](#transactions-resubmitted-by-block-events)
+  - [Transactions Submitted](#transactions-submitted)
+  - [Transactions Rate Validations Finished](#transactions-rate-validations-finished)
+  - [Invalid Transactions Removed](#invalid-transactions-removed)
+  - [Transactions Scheduled for Validation](#transactions-scheduled-for-validation)
+
+- [GRANDPA](#grandpa)
+  - [GRANDPA's Gossip](#grandpas-gossip)
+  - [Grandpa Precommits Total](#grandpa-precommits-total)
+  - [Grandpa Prevotes Total](#grandpa-prevotes-total)
+  - [Grandpa Finality Round](#grandpa-finality-round)
+  - [Total Gossip Expired](#total-gossip-expired)
+  - [Finality Grandpa Waiting Messages](#finality-grandpa-waiting-messages)
+  - [Justification Import Time](#justification-import-time)
+
+- [Authority Discovery](#authority-discovery)
+  - [Failures Handling 'Value Found' Events in DHT](#failures-handling-value-found-events-in-dht)
+  - [Known Authorities Count](#known-authorities-count)
+  - [Total Times External Addresses Published](#total-times-external-addresses-published)
+  - [Pending Authority Address Requests](#pending-authority-address-requests)
+  - [DHT Events Received by Authority Discovery](#dht-events-received-by-authority-discovery)
+  - [External Addresses Last Published](#external-addresses-last-published)
+  - [Total Authority Addresses Requested](#total-authority-addresses-requested)
+
+- [State System](#state-system)
+  - [State Cache](#state-cache)
+  - [Total Bandwidth Usage](#total-bandwidth-usage)
+  - [Evaluation Grid Build Time](#evaluation-grid-build-time)
+  - [Average Execution Time](#average-execution-time)
+  - [Average Time to Build Commitment](#average-time-to-build-commitment)
+
 
 
 
