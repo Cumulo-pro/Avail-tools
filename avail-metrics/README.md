@@ -57,6 +57,9 @@ For a complete description of the available metrics, check out the metrics docum
 
 The Grafana dashboard for Avail metrics provides an interactive, real-time visualization of all relevant data. This dashboard facilitates continuous monitoring of the network's status and quick identification of any potential issues.
 
+![image](https://github.com/user-attachments/assets/4334c292-d8af-4bb2-b296-65c57f9e032c)
+
+
 You can download the Grafana Ddashboard V3 from the link below:
 
 [![Grafana Dashboard](https://img.shields.io/badge/Grafana%20Dashboard-Download-blue?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Cumulo-pro/Avail-tools/blob/main/avail-metrics/Avail%20Metrics%20Cumulo%20v3-1732449812844.json)
